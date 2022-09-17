@@ -4,6 +4,9 @@ rm -rf /tmp/stripdance
 git clone $STRIP_REPO /tmp/stripdance
 cd /tmp/stripdance
 
+rm -rf sexy
+mkdir sexy
+
 curl -L -o main.zip https://github.com/truecharts/catalog/archive/refs/heads/main.zip
 
 unzip main.zip
@@ -13,17 +16,16 @@ cd catalog-main
 ls -la .
 
 rm -rf .github
-mkdir sexy
 
 cd stable
 ls -1 . |
 grep -E "^($STRIP_STABLE)\$" |
-xargs cp -r -t ../sexy/
+xargs cp -r -t ../../sexy/
 
 cd ../incubator
 ls -1 . |
 grep -E "^($STRIP_INCUBATOR)\$" |
-xargs cp -r -t ../sexy/
+xargs cp -r -t ../../sexy/
 
 cd ..
 
