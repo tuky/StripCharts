@@ -9,4 +9,6 @@ This is a simple dockerized cron script that grabs just the specifed apps from t
 
 The script will always amend and force push on the last commit (or create a new commit, if repo still empty) to prevent the repo from getting larger in file size.
 
+Also see the [wiki](https://github.com/tuky/StripCharts/wiki) for an example configuration with further explanations and screenshots.
+
 Contributions welcome! thx
